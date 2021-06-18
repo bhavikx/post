@@ -1,0 +1,44 @@
+{% extends 'like/main.html' %}
+{% block content %}
+
+<div id="form">
+    <form id="post-form" method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input id="postid" hidden>
+        <div class="fieldWrapper" id="the_post"> 
+            compose: {{ form.post_text }}
+            upload: {{ form.post_img }}
+            <br>
+            <img height="100" src="" id="uimg">
+        </div>
+        <input type="submit" id="postsubmit" value="post">
+        <input type="button" id="bclear" value="clear">
+    </form>
+    <hr>
+    <div id='res'></div> 
+</div>
+
+<div id="post_list">
+    {% for post in posts %}
+        
+        <div id="post_item">
+            <h3 id="pt" class="item-{{post.id}}">{{post.post_text}}</h3>   
+                <img height= "360" id="limg" class="img-{{post.id}}" src=
+                {% if post.post_img %}
+                "{{post.post_img.url}}"
+                {% endif %}>
+            <br>
+            <input type="button" id="b-like" 
+            value = {% if post.like %}
+                        liked
+                    {% else %}
+                        like
+                    {% endif %} data-id="{{post.id}}" class="like-{{post.id}}">
+            <input type="button" id="b-update" value="update" data-id="{{post.id}}" class="update-{{post.id}}">
+            <input type="button" id="b-delete" value="delete" data-id="{{post.id}}" class="delete-{{post.id}}">
+        <hr id="hr"></div>
+        
+    {% endfor %}
+</div>
+
+{% endblock %}

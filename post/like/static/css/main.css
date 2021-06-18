@@ -1,0 +1,84 @@
+body{
+    display: flex;
+}
+#post_text{
+    height: 70px;
+    border-radius: 10px;
+}
+#post_img{
+    padding-top: 10px;
+}
+#uimg{
+    padding-top: 10px;
+}
+#limg{
+    padding-top: 10px;
+}
+#post_list{
+    overflow-y: scroll;
+    max-height: 100vh;
+    float:right;
+    min-width: 55%;
+    direction: ltr;
+}
+#post-form{
+    display: flex;
+    padding: 10px;
+}
+#form{
+    float:left;
+    max-width: 45%;
+    height: 100vh;
+}
+#postsubmit{
+    height : 50px;
+    width : 50px;
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+#bclear{
+    height : 50px;
+    width : 50px;
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+#hr{
+    border : solid black;
+}
+
+#res{
+    display: none;
+    border: 2px solid red;
+    border-radius: 40px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 50px;
+    width: 100px;
+    height: 20px;
+}
+#b-like:hover{
+    color:dimgray;
+    background: oldlace;
+    border:peru;
+
+}
+#b-update:hover{
+    background:lightcyan;
+    border:lightgrey;
+}
+#b-delete:hover{
+    background: lightsalmon;
+    border:palevioletred;
+}
+#post_item{
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+}
+#pt,#b-like,#b-update,#b-delete{
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+}
